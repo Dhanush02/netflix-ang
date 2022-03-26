@@ -1,0 +1,18 @@
+<div class="container" [ngClass]="flag ? 'd-flex' : 'flex-wrap-style'">
+  <div [ngClass]="flag ? 'd-flex flex-wrap' : 'd-flex'">
+    <div
+      class="col-md-3 align-items-center justify-content-center px-2 py-2 d-flex flex-column"
+      *ngFor="let r of results"
+    >
+      <img
+        src="{{ image_url }}{{ r.poster_path }}"
+        alt="{{ r.name }}"
+        class="img-fluid"
+        (click)="getMovieId(r.id)"
+      />
+      <h4 class="text-center mt-2 text-white">
+        {{ r.name ? r.name : r.original_title }}
+      </h4>
+    </div>
+  </div>
+</div>

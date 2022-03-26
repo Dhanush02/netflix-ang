@@ -1,0 +1,9 @@
+.flex-wrap-style {
+  max-width: 1320px;
+  overflow-x: scroll;
+}
+.no-flex-wrap-style {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap !important;
+}
